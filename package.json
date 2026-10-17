@@ -9,11 +9,18 @@
     "build": "tsc -b && vite build",
     "lint": "oxlint",
     "preview": "vite preview",
-    "typecheck": "tsc -b"
+    "typecheck": "tsc -b",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "drizzle-kit migrate",
+    "db:seed": "tsx --tsconfig tsconfig.server.json server/db/seed.ts",
+    "db:studio": "drizzle-kit studio"
   },
   "dependencies": {
     "@hono/node-server": "^1.19.17",
+    "dotenv": "^18.0.8",
+    "drizzle-orm": "^0.45.4",
     "hono": "^4.13.13",
+    "postgres": "^3.4.9",
     "react": "^19.2.8",
     "react-dom": "^19.2.8",
     "zod": "^4.6.7"
@@ -23,6 +30,7 @@
     "@types/react": "^19.2.18",
     "@types/react-dom": "^19.2.7",
     "@vitejs/plugin-react": "^6.1.1",
+    "drizzle-kit": "^0.31.11",
     "oxlint": "^1.81.0",
     "tsx": "^4.23.15",
     "typescript": "~6.0.2",
