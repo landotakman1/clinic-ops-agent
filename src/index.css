@@ -79,7 +79,7 @@ code {
 }
 
 .shell {
-  max-width: 720px;
+  max-width: 1040px;
   margin: 0 auto;
   padding: 64px 24px;
 }
@@ -116,4 +116,99 @@ code {
 .status-error {
   color: var(--error);
   font-weight: 600;
+}
+
+.panel + .panel {
+  margin-top: 20px;
+}
+
+.panel-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.panel-header h2 {
+  margin: 0;
+}
+
+.filter {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+}
+
+.filter select {
+  font: inherit;
+  color: var(--text-h);
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 4px 8px;
+}
+
+.muted {
+  color: var(--text);
+  opacity: 0.8;
+}
+
+.table-scroll {
+  overflow-x: auto;
+}
+
+.task-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+}
+
+.task-table th {
+  text-align: left;
+  font-weight: 600;
+  color: var(--text-h);
+  border-bottom: 1px solid var(--border);
+  padding: 8px 12px 8px 0;
+}
+
+.task-table td {
+  vertical-align: top;
+  border-bottom: 1px solid var(--border);
+  padding: 10px 12px 10px 0;
+}
+
+.task-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+.badge {
+  display: inline-block;
+  white-space: nowrap;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: var(--code-bg);
+  color: var(--text-h);
+}
+
+.priority-urgent,
+.priority-high {
+  color: var(--error);
+}
+
+.status-open,
+.status-in_progress {
+  color: var(--accent);
+}
+
+.status-resolved {
+  color: var(--ok);
 }
